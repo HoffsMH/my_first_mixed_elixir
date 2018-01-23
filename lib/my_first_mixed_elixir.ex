@@ -12,7 +12,14 @@ defmodule MyFirst do
       :world
 
   """
-  def hello do
-    :world
+
+
+  def greet(greeting, name), do:  "#{greeting}, #{name}"
+
+  def hello, do: :world
+  def hello(name), do: "Hello " <> name
+
+  def goodbye do
+    :what
   end
 end

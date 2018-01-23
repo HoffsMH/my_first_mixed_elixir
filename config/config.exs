@@ -10,7 +10,7 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :my_first_mixed_elixir, key: :value
+# config :my_first_mixed_elixir, key: :value
 #
 # and access this configuration in your application as:
 #
