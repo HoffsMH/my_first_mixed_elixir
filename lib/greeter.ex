@@ -1,32 +1,32 @@
 defmodule Greeter do
-  def hello(names) when is_list(names) do
+
+  def hello(names, language_code \\ "en")
+  def hello(names, language_code) when is_list(names) do
     names
     |> Enum.join(", ")
-    |> hello
+    |> hello(language_code)
   end
 
-  def hello(name) when is_binary(name) do
-    phrase() <> name
-  end
-
-  defp phrase, do: "Hello, "
-
-  def hello_lang(name, language_code \\ "en") do
+  def hello(name, language_code) when is_binary(name) do
     phrase(language_code) <> name
   end
 
   # just assume that this is the argument, that is really nice
-  # defp phrase("en"), do: "Whats up, "
-  # defp phrase("es"), do: "Hola, "
-  defp phrase(lang) do
-    translations()[lang]
-  end
+  # pattern matching
+  defp phrase("en"), do: "Hello, "
+  defp phrase("es"), do: "Hola, "
 
-  defp translations do
-    %{
-      "en" => "Whats up, ",
-      "es" => "Hola, "
-    }
-  end
+
+  # could also do this
+  # defp phrase(lang) do
+  #   translations()[lang]
+  # end
+  #
+  # defp translations do
+  #   %{
+  #     "en" => "Hello, ",
+  #     "es" => "Hola, "
+  #   }
+  # end
 
 end

@@ -11,8 +11,8 @@ defmodule GreeterTest do
   end
 
   test "greets a user in other langs" do
-    assert Greeter.hello_lang("Pablo", "es") == "Hola, Pablo"
-    assert Greeter.hello_lang("Matt", "en") == "Whats up, Matt"
-    assert Greeter.hello_lang("Matt") == "Whats up, Matt"
+    assert Greeter.hello("Pablo", "es") == "Hola, Pablo"
+    assert Greeter.hello("Matt", "en") == "Hello, Matt"
+    assert Greeter.hello("Matt") == "Hello, Matt"
   end
 end
