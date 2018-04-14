@@ -1,6 +1,6 @@
 # MyFirst
 
-**TODO: Add description**
+first elixir repo using mix as the skeleton 2nd elixir rep altogether
 
 ## Installation
 

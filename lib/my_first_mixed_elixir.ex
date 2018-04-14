@@ -8,17 +8,16 @@ defmodule MyFirst do
 
   ## Examples
 
-      iex> MyFirst.hello
-      :world
+      iex> MyFirst.main
+      :ok
 
   """
-
-  def greet(greeting, name), do: "#{greeting}, #{name}"
-
-  def hello, do: :world
-  def hello(name), do: "Hello " <> name
-
-  def goodbye do
-    :what
+  def main(options \\ %{ language_code: nil })
+  def main(%{ language_code: language_code }) do
+    IO.puts(Greeter.hello("Pablo", language_code))
   end
 end
+
+MyFirst.main()
+MyFirst.main(%{ language_code: "es" })
+MyFirst.main(%{ language_code: nil })

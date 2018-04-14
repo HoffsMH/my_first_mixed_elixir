@@ -1,6 +1,6 @@
 defmodule Greeter do
-
   def hello(names, language_code \\ "en")
+  def hello(names, nil), do: hello(names)
   def hello(names, language_code) when is_list(names) do
     names
     |> Enum.join(", ")
